@@ -3,6 +3,9 @@
 All notable changes. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow [SemVer](https://semver.org/).
 
 
+## Unreleased
+- **Import:** `smolagents` dialect for `agentest std import`: smolagents memory steps (`agent.memory.get_full_steps()`) to OTLP. Pure mapping, no new dependency, no rule or verdict change. Example in `examples/smolagents_import/` (same 130 verdicts as the LangGraph example); tests in `tests/test_smolagents_import.py`.
+
 ## v3.3.2 — 2026-11-02 (packaging; rules and verdicts unchanged)
 - **Packaging:** the PyPI distribution name is now `agentest-ai` (`agentest` on PyPI belongs to an unrelated project). The import name and the `agentest` command are unchanged. PyPI upload is pending; until it is live, install from git with `pip install "agentest-ai @ git+https://github.com/srpadmanabhuni/agentest.git@v3.3.2"`.
 - **CI:** `RELEASE` gains `pypi_name`; `scripts/check_versions.py` checks the pyproject name, the distribution in every git install line, and the `pip install agentest-ai` line.
